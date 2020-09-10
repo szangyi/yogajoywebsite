@@ -6,9 +6,17 @@ footer {
     justify-content: center;
 }
 
+
+img{
+
+    max-width: 40vw;
+}
+
 footer p {
     font-family: 'Helvetica';
     text-align: center;
+
+
 
 =======
 =======
@@ -23,3 +31,6 @@ header {
 =======
 >>>>>>> origin/master
 }
+
+
+
