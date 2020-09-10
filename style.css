@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 footer {
     background-color: beige;
     display: flex;
@@ -8,4 +9,11 @@ footer p {
     font-family: 'Helvetica';
     text-align: center;
 
+=======
+
+
+header {
+    background-color: darkgray;
+    color: white;
+>>>>>>> origin/master
 }
