@@ -1,0 +1,9 @@
+footer {
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    font-family: 'Helvetica'
+}
