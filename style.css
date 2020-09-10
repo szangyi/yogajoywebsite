@@ -5,5 +5,7 @@ footer {
 }
 
 footer p {
-    font-family: 'Helvetica'
+    font-family: 'Helvetica';
+    text-align: center;
+
 }
