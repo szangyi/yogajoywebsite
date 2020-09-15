@@ -29,6 +29,7 @@
     --color-11: #1E669A;
     --color-12: #F8F4F3;
     --color-13: #EBE9E4;
+    --color-14: #BABABA;
 
 
     --primary-font: 'Spartan', sans-serif;
@@ -91,7 +92,43 @@ a:hover {
 
 .secondarysection {
     background-color: var(--color-13);
+    font-family: var(--secondary-font);
+padding: 4em 4em 2em 4em;
+}
 
+button {
+    margin-top: 3vw;
+    background-color: none;
+    border: 0.8px solid;
+    padding-top: 1vw;
+    border-radius: 25px;
+text-align: center;
+    padding: 1vw 2vw;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    color: var(--color-11);
+    font-weight: 500;
+}
+
+.copytext {
+    color: var(--color-14);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.detailstext {
+    padding-top: 1em;
+   font-size: 15px;
+}
+
+h5 {
+    padding-top: 2vw;;
+    color: var(--color-5);
+    font-family: var(--primary-font);
+    text-align: left;
+    font-size: 40px;
+    font-weight: 400;
 }
 
 article {
@@ -235,13 +272,6 @@ article > button {
     /*    font-size: 1.3vw;*/
 }
 
-h5 {
-    display: flex;
-    font-size: calc(1em + 1vw);
-    margin: 0;
-    margin-bottom: 1rem;
-    justify-content: flex-end;
-}
 
 .soldout {
     filter: grayscale(100%);
@@ -430,6 +460,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 3em 0;
 
 }
 
