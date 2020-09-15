@@ -16,7 +16,7 @@ function showProduct(myProduct) {
     //clone the template
     const myCopy = temp.cloneNode(true);
     myCopy.querySelector(".data_name").textContent = myProduct.gsx$name.$t;
-    myCopy.querySelector(".data_type").textContent = myProduct.gsx$type.$t;
+    myCopy.querySelector(".data_type").textContent = myProduct.gsx$type2.$t;
     myCopy.querySelector(".data_difficulty").textContent = `Difficulty: ${myProduct.gsx$difficulty.$t}`;
 
     const img = myCopy.querySelector(".product_image");
@@ -25,24 +25,54 @@ function showProduct(myProduct) {
 
 
     //FILTERING
+    //balance
     const article = myCopy.querySelector("article");
-    if (myProduct.gsx$type.$t == "Balance") {
+    if (myProduct.gsx$type2.$t.includes("Balance")) {
         article.classList.add("balance")
     }
 
-    const balancefilter = document.querySelector("#veggiefilter");
-    veggiefilter.addEventListener("click", veggieFilterClicked);
+    const balancefilter = document.querySelector("#balancefilter");
+    balancefilter.addEventListener("click", balanceFilterClicked);
 
-    function veggieFilterClicked() {
-        //select all non veggie
-        veggiefilter.classList.toggle("active");
-        const articles = document.querySelectorAll("article:not(.vegetarian)");
+    function balanceFilterClicked() {
+        balancefilter.classList.toggle("active");
+        const articles = document.querySelectorAll("article:not(.balance)");
         articles.forEach(elem => {
             elem.classList.toggle("hidden")
         })
     }
 
+    //stretch
+    if (myProduct.gsx$type2.$t.includes("Stretch")) {
+        article.classList.add("stretch")
+    }
 
+    const stretchfilter = document.querySelector("#stretchfilter");
+    stretchfilter.addEventListener("click", stretchFilterClicked);
+
+    function stretchFilterClicked() {
+        stretchfilter.classList.toggle("active");
+        const articles = document.querySelectorAll("article:not(.stretch)");
+        articles.forEach(elem => {
+            elem.classList.toggle("hidden")
+        })
+    }
+
+    //strength
+    if (myProduct.gsx$type2.$t.includes("Strength")) {
+        article.classList.add("strength")
+    }
+
+    const strenghtfilter = document.querySelector("#strengthfilter");
+    strengthfilter.addEventListener("click", strengthFilterClicked);
+
+    function strengthFilterClicked() {
+        strengthfilter.classList.toggle("active");
+        const articles = document.querySelectorAll("article:not(.strength)");
+        articles.forEach(elem => {
+            elem.classList.toggle("hidden")
+        })
+    }
 
 
     /*
