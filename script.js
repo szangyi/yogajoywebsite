@@ -270,14 +270,13 @@ function getData(cats) {
 function createSections(categories) {
     categories.forEach(category => {
         const section = document.createElement("section");
-        section.setAttribute("id", category);
+        section.setAttribute("id", gsx$category.$t);
         const h1 = document.createElement("h1");
-        h1.textContent = category;
+        h1.textContent = gsx$category.$t;
         section.appendChild(h1);
         document.querySelector(".productlist").appendChild(section);
     })
 }
-
 
 
 //close the modal when clicked

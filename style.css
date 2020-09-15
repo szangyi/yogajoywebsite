@@ -28,6 +28,7 @@
     --color-10: #707070;
     --color-11: #1E669A;
     --color-12: #F8F4F3;
+    --color-13: #EBE9E4;
 
 
     --primary-font: 'Spartan', sans-serif;
@@ -82,10 +83,15 @@ a:hover {
 }
 
 
-section {
+.mainsection {
     grid-gap: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+
+.secondarysection {
+    background-color: var(--color-13);
+
 }
 
 article {
@@ -419,9 +425,8 @@ button.active {
 
 
 footer {
-    background-color: #953733;
+    font-family: var(--secondary-font);
     height: 5vw;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
