@@ -124,10 +124,20 @@ h1 {
     font-size: 5vw;
 }
 
+h6 {
+    font-family: var(--primary-font);
+    font-size: 3vw;
+    font-weight: 400;
+    color: var(--color-5);
+    background-color: var(--color-2);
+    padding: 1.5vw 0 1.5vw 5vw;
+    margin-top: 1vw;
+}
+
 .description_container {
     display: grid;
     grid-template-columns: 2fr 5fr;
-    padding: 5vw;
+    padding: 5vw 5vw 2vw 5vw;
 
 }
 
@@ -160,7 +170,7 @@ h1 {
     padding: 4em 4em 2em 4em;
 }
 
-button {
+.learnmore_button {
     margin-top: 3vw;
     background-color: none;
     border: 0.8px solid;
@@ -173,6 +183,42 @@ button {
     font-size: 1.1vw;
     color: var(--color-11);
     font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.learnmore_button:hover {
+    background-color: #BAD3DB;
+    color: white;
+}
+
+details {
+    color: var(--color-10);
+    font-family: var(--secondary-font);
+    text-align: end;
+    padding-right: 5vw;
+    font-size: 1.4vw;
+}
+
+.filter_button {
+    text-align:end;
+    border: 0.8px solid;
+    border-radius: 25px;
+    text-align: center;
+    padding: 1vw 2vw;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--color-7)
+
+}
+
+.active {
+     background-color: var(--color-5)
 }
 
 .copytext {
@@ -248,6 +294,7 @@ h2 {
     font-weight: 300;
     text-align: center;
     padding: 2em;
+    margin-top: auto;
 }
 
 
@@ -281,43 +328,14 @@ main {
     padding: 4vw 5vw;
 }
 
-article > button {
-    margin-top: auto;
-    /* to push it to the bottom of the box & margin-top: auto takes the available space */
-    background: #953733;
-    color: white;
-    padding: 0.3rem;
-    border: none;
-    /*    font-size: 1rem;*/
-    cursor: pointer;
-}
-
-
-.data_discount {
-    font-size: calc(1em + 0.5vw);
-    color: red;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    background-color: white;
-}
 
 .balance {
-    /*    color: red;*/
 }
 
 .stretch {}
 
 .strength {}
 
-.data_price {
-    display: flex;
-    font-size: calc(1em + 0.3vw);
-    justify-content: flex-end;
-    margin: 0;
-    margin-bottom: 1rem;
-}
 
 .data_shortdescription {
     /*    font-size: 1.3vw;*/
@@ -329,29 +347,12 @@ article > button {
     align-self: center;
 }
 
-.soldouttext {
-    background-color: #953733;
-    display: flex;
-    justify-content: center;
-    font-size: 2vw;
-}
 
 .img {
     display: flex;
 
 }
 
-
-.veg {
-    background-image: url(imgs/veg.png);
-    background-size: cover;
-    width: 27px;
-    height: 29px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-}
 
 imgs {
     display: flex;
@@ -363,72 +364,9 @@ h3 {
 }
 
 
-.vegmodal {
-    background-image: url(imgs/veg.png);
-    background-size: cover;
-    width: 27px;
-    height: 29px;
-    float: left;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    margin-right: 5px;
-
-}
-
-.alcmodal {
-    background-image: url(imgs/alc.png);
-    background-size: cover;
-    width: 15px;
-    height: 32px;
-    display: flex;
-    margin-right: 5px;
-    padding: 0;
-    margin: 0;
-}
-
-.allergens {
-    position: relative;
-    clear: both;
-}
-
-.alc {
-    background-image: url(imgs/alc.png);
-    background-size: cover;
-    width: 15px;
-    height: 32px;
-}
-
-.lac {
-    background-image: url(imgs/lac.png);
-    background-size: cover;
-    width: 15px;
-    height: 35px;
-}
-
-.nut {
-    background-image: url(imgs/nut.png);
-    background-size: cover;
-    width: 15px;
-    height: 35px;
-}
-
-.kart {
-    background-image: url(imgs/kart.png);
-    background-size: cover;
-    width: 40px;
-    height: 35px;
-}
-
 .hidden {
     /*    visibility: hidden;*/
     display: none;
-}
-
-
-button.active {
-    background-color: #6F2421;
-    color: white;
 }
 
 
@@ -445,23 +383,42 @@ button.active {
 
 .modal-content {
     background-color: #fefefe;
-    padding-bottom: 5em;
-    margin: 3rem 14rem 0 14rem;
+    padding-bottom: 2em;
+    margin: 3rem 18rem 0 18rem;
+    border-radius: 3px;
 }
 
 .modal-name {
     display: flex;
     justify-content: center;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+
+}
+
+.modal-name2 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    color: var(--color-10);
 
 }
 
 .modal-image {
     display: block;
     background-size: contain;
+    padding: 3vw 0 2vw 0;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 50%;
     height: auto;
+}
+
+.modal-body {
+    padding: 4vw 5vw 3vw 5vw;
+    font-family: var(--secondary-font);
+    font-size: 1.3vw;
 }
 
 
