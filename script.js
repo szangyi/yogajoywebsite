@@ -214,30 +214,30 @@ function showProduct(myProduct) {
     document.querySelector("section").appendChild(myCopy);
 }
 
-function showDetails(data) {
-    console.log(data);
+function showDetails(myProduct) {
+    console.log(products);
     const img = modal.querySelector(".modal-image");
-    img.setAttribute("src", `https://kea-alt-del.dk/t5/site/imgs/small/${data.image}-sm.jpg`)
+    img.setAttribute("src", `http://a-day.dk/module-07-yoga/web/imgs/poses/${myProduct.gsx$image.$t}`)
 
-    modal.querySelector(".modal-name").textContent = data.name;
+    modal.querySelector(".modal-name").textContent = myProduct.gsx$name.$t;
     modal.querySelector(".modal-description").textContent = data.longdescription;
     //    modal.querySelector(".modal-price").textContent = `${data.price}kr`;
     modal.querySelector(".vegmodal").classList.remove("hidden");
     //    modal.querySelector(".alc").classList.remove("hidden");
 
 
-    if (data.alcohol) {
-        modal.querySelector(".alcmodal").classList.remove("hidden")
-    };
-
-    if (data.vegetarian) {
-        modal.querySelector(".vegmodal").classList.remove("hidden")
-    };
-
-    if (data.soldout) {
-        modal.querySelector(".modal-content").style.filter = "grayscale(100)";
-        modal.querySelector(".soldouttext").classList.remove("hidden");
-    }
+//    if (data.alcohol) {
+//        modal.querySelector(".alcmodal").classList.remove("hidden")
+//    };
+//
+//    if (data.vegetarian) {
+//        modal.querySelector(".vegmodal").classList.remove("hidden")
+//    };
+//
+//    if (data.soldout) {
+//        modal.querySelector(".modal-content").style.filter = "grayscale(100)";
+//        modal.querySelector(".soldouttext").classList.remove("hidden");
+//    }
 
 
     modal.querySelector(".allergens").textContent = `Allergens: ${data.allergens}`;

@@ -78,8 +78,8 @@ nav li {
     color: var(--color-7);
 }
 
-a:hover {
-    color: var(--color-7);
+ul a:hover {
+    color: var(--color-5);
     border-bottom: 2px solid;
     border-bottom-color: var(--color-7);
 
@@ -94,7 +94,7 @@ nav a {
     width: 50%;
     height: auto;
     padding-left: 5vw;
-    padding-top: 3vw;
+    padding-top: 1vw;
 
 }
 
@@ -122,6 +122,30 @@ h1 {
     font-family: var(--primary-font);
     font-weight: 600;
     font-size: 5vw;
+}
+
+.description_container {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    padding: 5vw;
+
+}
+
+.description_intro {
+    font-family: var(--secondary-font);
+    color: var(--color-14);
+    font-weight: 400;
+    font-size: 15px;
+
+}
+
+
+.description_main {
+    font-family: var(--secondary-font);
+    color: var(--color-3);
+    font-weight: 400;
+    font-size: 16px;
+
 }
 
 .mainsection {
@@ -154,7 +178,7 @@ button {
 .copytext {
     color: var(--color-14);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .detailstext {
@@ -254,7 +278,7 @@ main {
     font-family: var(--secondary-font);
     max-width: none;
     margin: 0;
-    padding: 2rem;
+    padding: 4vw 5vw;
 }
 
 article > button {
