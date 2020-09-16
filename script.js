@@ -20,7 +20,7 @@ function showProduct(myProduct) {
     myCopy.querySelector(".data_difficulty").textContent = `Difficulty: ${myProduct.gsx$difficulty.$t}`;
 
     const img = myCopy.querySelector(".product_image");
-    img.setAttribute("src", `http://a-day.dk/yogaposes/${myProduct.gsx$image.$t}`)
+    img.setAttribute("src", `http://a-day.dk/module-07-yoga/web/imgs/poses/${myProduct.gsx$image.$t}`)
 
 
 
