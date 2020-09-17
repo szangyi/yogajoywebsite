@@ -133,9 +133,9 @@ function showDetails(myProduct) {
 
     modal.querySelector(".modal-name").textContent = myProduct.gsx$name.$t;
     modal.querySelector(".modal-name2").textContent = myProduct.gsx$name2.$t;
-    modal.querySelector(".modal-difficulty").textContent = myProduct.gsx$difficulty.$t;
+    modal.querySelector(".modal-difficulty").textContent = `Difficulty: ${myProduct.gsx$difficulty.$t}`;
     modal.querySelector(".modal-type").textContent = myProduct.gsx$type2.$t;
-    modal.querySelector(".modal-description").textContent = myProduct.longdescription;
+    modal.querySelector(".modal-description").textContent = myProduct.gsx$description.$t;
 
     modal.classList.remove("hidden");
 }
