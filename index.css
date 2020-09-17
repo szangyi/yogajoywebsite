@@ -89,50 +89,50 @@ button {
 
 /*Start header*/
 
-/*
-li,
-a,
-button {
-    font-family: 'Spartan', sans-serif;
-    font-size: 16px;
-    color: gray;
-    text-decoration: none;
-}
-
-
 header {
-    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: grid;
     justify-content: space-between;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 2vw;
+}
+
+nav ul {
+    display: flex;
     align-items: center;
-    padding: 30px 10%;
+    justify-content: space-evenly;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2vw;
+
+
 }
 
-.logo {
-    cursor: pointer;
-}
-
-.nav-lnk {
-    list-style: none;
-}
-
-.nav-link li {
+nav li {
     display: inline;
-    padding: 20px;
+    text-align: center;
+    padding-top: 3vw;
+    color: var(--color-7);
+}
+
+
+ul a:hover {
+    color: var(--color-5);
+    border-bottom: 2px solid;
+    border-bottom-color: var(--color-5);
 
 
 }
 
-.nav-link li a {
-    transition: all 0.3s ease 0s;
-    margin-right: 5vw;
+nav a {
+    text-decoration: none;
+    color: var(--color-7);
 }
-
-
-.nav-link li a:hover {
-    color: bisque;
-}
-*/
-
 
 
 /*End header*/
@@ -162,9 +162,6 @@ header {
 
 
 /*Start poses*/
-
-
-
 
 .poses .container {
     display: flex;
