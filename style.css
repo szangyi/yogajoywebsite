@@ -130,7 +130,7 @@ h6 {
     font-weight: 400;
     color: var(--color-5);
     background-color: var(--color-2);
-    padding: 1.5vw 0 1.5vw 5vw;
+    padding: 1.5vw 0 1.5vw 1.5vw;
     margin-top: 1vw;
 }
 
@@ -159,18 +159,23 @@ h6 {
 }
 
 .productlist section {
-    grid-gap: 5rem;
+    grid-gap: 2rem 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    padding: 0 5vw;
 }
+
 .productlist h6 {
     grid-column: 1/-1;
+    margin-top: 5vw;
 }
+
 
 .secondarysection {
     background-color: var(--color-13);
     font-family: var(--secondary-font);
     padding: 4em 4em 2em 4em;
+    margin-bottom: 5em;
 }
 
 .learnmore_button {
@@ -328,7 +333,7 @@ main {
     font-family: var(--secondary-font);
     max-width: none;
     margin: 0;
-    padding: 4vw 5vw;
+/*    padding: 4vw 5vw;*/
 }
 
 
