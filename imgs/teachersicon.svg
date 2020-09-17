@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="191" height="192" viewBox="0 0 191 192">
+  <g id="ICONS" transform="translate(0.063)">
+    <g id="Group-11">
+      <ellipse id="Oval" cx="95.5" cy="96" rx="95.5" ry="96" transform="translate(-0.063 0)" fill="#425a53" opacity="0.65"/>
+      <path id="Stroke-1" d="M41.365,41.462A11.365,11.365,0,1,0,30,30.1,11.366,11.366,0,0,0,41.365,41.462Z" transform="translate(55.513 33.319)" fill="none" stroke="#fefefe" stroke-width="4" fill-rule="evenodd"/>
+      <path id="Stroke-3" d="M33,28.732h6.793c5.343,0,8.041,2.211,10.525,3.769q.953.6,5.412,14.365Q41.879,61.17,39.793,59.88" transform="translate(61.139 52.127)" fill="none" stroke="#fefefe" stroke-linecap="round" stroke-width="4" fill-rule="evenodd"/>
+      <path id="Stroke-5" d="M48.73,28.732h-6.8c-5.339,0-8.041,2.211-10.524,3.769q-.946.6-5.41,14.365Q39.851,61.17,41.934,59.88" transform="translate(48.01 52.127)" fill="none" stroke="#fefefe" stroke-linecap="round" stroke-width="4" fill-rule="evenodd"/>
+      <path id="Stroke-7" d="M42.559,37.732a45.955,45.955,0,0,0,.458,10.519s-22.114-4.854-23,3.406,31,14.488,39.76,14.488" transform="translate(36.835 69)" fill="none" stroke="#fefefe" stroke-linecap="round" stroke-width="4" fill-rule="evenodd"/>
+      <path id="Stroke-9" d="M51.218,37.732a45.955,45.955,0,0,1-.458,10.519s22.114-4.854,23,3.406S42.763,66.145,34,66.145" transform="translate(63.147 69)" fill="none" stroke="#fefefe" stroke-linecap="round" stroke-width="4" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

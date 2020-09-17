@@ -1,12 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500&display=swap');
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500&display=swap');
+
+
 
 :root {
     --color-1: #FFFFFF;
@@ -20,17 +29,37 @@
     --color-9: #AAAAAA;
     --color-10: #707070;
     --color-11: #1E669A;
+    --color-12: #F8F4F3;
+    --color-13: #EBE9E4;
+    --color-14: #BABABA;
+
 
 
     --primary-font: 'Spartan', sans-serif;
     --secondary-font: 'Montserrat', sans-serif;
     --main-text-color: #000;
 
+
     --white-space: 1rem;
 }
 
 body {
     margin: 0;
+}
+
+
+
+
+
+html {
+    /*        scroll-behavior: smooth;*/
+    font-size: 100%;
+}
+
+
+header {
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -49,6 +78,7 @@ nav ul {
     font-weight: 500;
     font-size: 1.2vw;
 
+
 }
 
 nav li {
@@ -58,10 +88,12 @@ nav li {
     color: var(--color-7);
 }
 
+
 ul a:hover {
     color: var(--color-5);
     border-bottom: 2px solid;
     border-bottom-color: var(--color-5);
+
 
 }
 
@@ -76,7 +108,60 @@ nav a {
     padding-left: 5vw;
     padding-top: 3vw;
 
+
 }
+
+/*
+.header_image {
+    background-image: url(http://arinafedosiuk.com/classes_img/classes_img.jpg);
+    background-size: cover;
+    height: 39vw;
+    margin-bottom: 5vw;
+}
+*/
+
+#banner {
+    background-image: url(http://a-day.dk/module-07-yoga/web/imgs/selfpractisebanner.png);
+    background-size: cover;
+    width: auto;
+    height: 39vw;
+}
+
+h1 {
+    text-align: left;
+    padding-top: 29vw;
+    padding-left: 6vw;
+    color: var(--color-1);
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 5vw;
+}
+
+h6 {
+    font-family: var(--primary-font);
+    font-size: 3vw;
+    font-weight: 400;
+    color: var(--color-5);
+    background-color: var(--color-2);
+    padding: 1.5vw 0 1.5vw 1.5vw;
+    margin-top: 1vw;
+}
+
+.description_container {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    padding: 5vw 5vw 2vw 5vw;
+
+}
+
+.description_intro {
+    font-family: var(--secondary-font);
+    color: var(--color-14);
+    font-weight: 400;
+    font-size: 15px;
+
+}
+
 
 
 .header_image {
@@ -184,6 +269,56 @@ nav a {
     margin-right: 2vw;
 
 }
+.description_main {
+    font-family: var(--secondary-font);
+    color: var(--color-3);
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.productlist section {
+    grid-gap: 2rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    padding: 0 5vw;
+}
+
+.productlist h6 {
+    grid-column: 1/-1;
+    margin-top: 5vw;
+}
+
+
+.secondarysection {
+    background-color: var(--color-13);
+    font-family: var(--secondary-font);
+    padding: 4em 4em 2em 4em;
+    margin-bottom: 5em;
+}
+
+.learnmore_button {
+    margin-top: 3vw;
+    background-color: none;
+    border: 0.8px solid;
+    padding-top: 1vw;
+    border-radius: 25px;
+    text-align: center;
+    padding: 1vw 2vw;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    color: var(--color-11);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.learnmore_button:hover {
+    background-color: #BAD3DB;
+    color: white;
+}
 
 
 .p_style {
@@ -255,7 +390,310 @@ footer > p {
         font-size: 10px;
 
     }
+}
+
+details {
+    color: var(--color-10);
+    font-family: var(--secondary-font);
+    text-align: end;
+    padding-right: 5vw;
+    font-size: 1.4vw;
+}
+
+.filter_button {
+    text-align:end;
+    border: 0.8px solid;
+    border-radius: 25px;
+    text-align: center;
+    padding: 1vw 2vw;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--color-7)
+
+}
+
+.active {
+     background-color: var(--color-5)
+}
+
+.copytext {
+    color: var(--color-14);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.detailstext {
+    padding-top: 1em;
+    font-size: 15px;
+}
+
+h5 {
+    padding-top: 2vw;
+    ;
+    color: var(--color-5);
+    font-family: var(--primary-font);
+    text-align: left;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+article {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    transition: 0.3s;
+    border: 2px;
+    border: 1px solid var(--color-12);
 
 
+}
+
+article:hover {
+    transform: scale(1.1)
+}
+
+
+.imagecontainer {}
+
+
+.imagecontainer img {
+    max-width: 100%;
+    height: auto;
+    order: 2;
+}
+
+h2 {
+    display: flex;
+    margin: 0;
+    padding: 8px;
+    background-color: var(--color-12);
+    color: var(--color-3);
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    margin-top: -6px;
+}
+
+
+.data_type {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    padding: 2em;
+}
+
+.data_difficulty {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    padding: 2em;
+    margin-top: auto;
+}
+
+
+
+
+.modal-header {
+    background-color: #953733;
+    color: white;
+    font-size: calc(0.4rem + 1vw);
+    align-items: center;
+    justify-content: center;
+}
+
+article > ul {
+    margin: 0 0 1rem;
+}
+
+article > p {
+    margin: 0.25em 1rem 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    font-family: var(--secondary-font);
+    max-width: none;
+    margin: 0;
+/*    padding: 4vw 5vw;*/
+}
+
+
+.balance {
+}
+
+.stretch {}
+
+.strength {}
+
+
+.data_shortdescription {
+    /*    font-size: 1.3vw;*/
+}
+
+
+.soldout {
+    filter: grayscale(100%);
+    align-self: center;
+}
+
+
+.img {
+    display: flex;
+
+}
+
+
+imgs {
+    display: flex;
+}
+
+h3 {
+    font-size: calc(1rem + 1vw);
+
+}
+
+
+.hidden {
+    /*    visibility: hidden;*/
+    display: none;
+}
+
+
+.modal-background {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding-bottom: 2em;
+    margin: 3rem 18rem 0 18rem;
+    border-radius: 3px;
+}
+
+.modal-name {
+    display: flex;
+    justify-content: center;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+
+}
+
+.modal-name2 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    color: var(--color-10);
+
+}
+
+.modal-image {
+    display: block;
+    background-size: contain;
+    padding: 3vw 0 2vw 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+}
+
+.modal-body {
+    padding: 4vw 5vw 3vw 5vw;
+    font-family: var(--secondary-font);
+    font-size: 1.3vw;
+}
+
+
+.relaxin {
+    animation: relaxin 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes relaxin {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.relaxout {
+    animation: relaxout 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes relaxout {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+
+    }
+}
+
+
+footer {
+    font-family: var(--secondary-font);
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 0;
+
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {}
+
+
+
+@media only screen and (max-width: 767px) {
+    a {
+        /*        font-size: 0.8rem;*/
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    a {
+        /*        font-size: 0.6rem;*/
+    }
 
 }
