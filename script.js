@@ -1,9 +1,48 @@
 const link = "https://spreadsheets.google.com/feeds/list/1qu1yHszHhwM0F7lABGy_iq63-XnVuDvnkFQH92jnkIc/od6/public/values?alt=json"
 
+getData();
+
+function getData() {
+    //    createSections(cats);
+    //fetch data
+
+    fetch(link)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            createSections(data);
+        })
+
+}
+
+//---------------SORTING----------------
+
+
+
+function compareLevel(a, b) {
+    if (a.gsx$level.$t < b.gsx$level.$t) {
+        return -1;
+    }
+    if (a.gsx$level.$t > b.gsx$level.$t) {
+        return 1;
+    }
+    return 0;
+}
+
+
+
+//-----------SORTING END----------------
+
+
 //loop through products
 function dataReceived(products) {
-    console.log(products);
-    products.feed.entry.forEach(showProduct);
+    //console.log(products);
+    const data=products.feed.entry;
+    console.log(data.length)
+    data.sort(compareLevel);
+    console.log(data)
+    data.forEach(showProduct);
 
     //    products.forEach(showInfo)
 }
@@ -76,18 +115,19 @@ function showProduct(myProduct) {
 
 
     myCopy.querySelector("article").addEventListener("click", () => {
-        fetch(`https://kea-alt-del.dk/t5/api/product?id=` + myProduct.id)
+        showDetails(myProduct)
+        /*fetch(`https://kea-alt-del.dk/t5/api/product?id=` + myProduct.id)
             .then(res => res.json())
-            .then(showDetails);
+            .then(showDetails);*/
     });
 
     //https://spreadsheets.google.com/feeds/list/1qu1yHszHhwM0F7lABGy_iq63-XnVuDvnkFQH92jnkIc/od6/public/values?alt=json
 
-    document.querySelector("section").appendChild(myCopy);
+    document.querySelector("#"+myProduct.gsx$category.$t).appendChild(myCopy);
 }
 
 function showDetails(myProduct) {
-    console.log(products);
+
     const img = modal.querySelector(".modal-image");
     img.setAttribute("src", `http://a-day.dk/module-07-yoga/web/imgs/poses/${myProduct.gsx$image.$t}`)
 
@@ -101,51 +141,30 @@ function showDetails(myProduct) {
 }
 
 
-getData();
-
-function getData(cats) {
-    //    createSections(cats);
-    //fetch data
-
-    fetch(link)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            dataReceived(data);
-        })
-
-}
 
 
-//---------------SORTING----------------
 
-//const data = ??
-//
-//function compareLevel(a, b) {
-//    if (a.gsx$level.$t < b.gsx$level.$t) {
-//        return -1;
-//    }
-//    if (a.gsx$level.$t > b.gsx$level.$t) {
-//        return 1;
-//    }
-//    return 0;
-//}
-//data.sort(compareLevel);
-
-
-//-----------SORTING END----------------
 
 
 function createSections(categories) {
-    categories.forEach(category => {
+    const filteredCategories = [];
+    categories.feed.entry.forEach(cat=>{
+        if(!filteredCategories.includes(cat.gsx$category.$t)){
+            filteredCategories.push(cat.gsx$category.$t)
+        }
+    })
+    console.log(filteredCategories)
+
+    filteredCategories.forEach(category => {
         const section = document.createElement("section");
-        section.setAttribute("id", gsx$category.$t);
-        const h1 = document.createElement("h6");
-        h6.textContent = gsx$category.$t;
+        section.setAttribute("id", category);
+        const h6 = document.createElement("h6");
+        h6.textContent = category + " Yoga";
         section.appendChild(h6);
         document.querySelector(".productlist").appendChild(section);
     })
+    dataReceived(categories)
+
 }
 
 

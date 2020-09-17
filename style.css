@@ -81,7 +81,7 @@ nav li {
 ul a:hover {
     color: var(--color-5);
     border-bottom: 2px solid;
-    border-bottom-color: var(--color-7);
+    border-bottom-color: var(--color-5);
 
 }
 
@@ -158,10 +158,13 @@ h6 {
 
 }
 
-.mainsection {
+.productlist section {
     grid-gap: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+.productlist h6 {
+    grid-column: 1/-1;
 }
 
 .secondarysection {
